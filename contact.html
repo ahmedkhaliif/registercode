@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<title>Nala Soo Xiriir | Diiwaan-gelinta Ardayda</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#2563eb,#1e40af);
+  min-height:100vh;
+  color:#111;
+}
+
+/* NAV */
+nav{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:white;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+
+nav a:hover{opacity:.8}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:90px 20px;
+  color:white;
+  animation:fadeDown 1s ease;
+}
+
+.badge{
+  background:rgba(255,255,255,.2);
+  padding:6px 18px;
+  border-radius:20px;
+  display:inline-block;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:45px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  opacity:.9;
+  font-size:18px;
+}
+
+/* CONTACT CARDS */
+.contact-grid{
+  max-width:1100px;
+  margin:-40px auto 60px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.contact-card{
+  background:white;
+  border-radius:25px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+  transition:.4s;
+  animation:fadeUp 1s ease;
+}
+
+.contact-card:hover{
+  transform:translateY(-8px) scale(1.03);
+}
+
+.icon{
+  width:60px;
+  height:60px;
+  background:#2563eb;
+  color:white;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  margin:auto auto 15px;
+  animation:pulse 2s infinite;
+}
+
+/* FORM */
+.form-section{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px 80px;
+}
+
+.form-box{
+  background:rgba(255,255,255,0.95);
+  border-radius:30px;
+  padding:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  box-shadow:0 25px 50px rgba(0,0,0,.2);
+}
+
+.form-box h2{
+  grid-column:1/-1;
+  text-align:center;
+  color:#1e3a8a;
+}
+
+.input-group{
+  display:flex;
+  flex-direction:column;
+}
+
+label{
+  font-weight:600;
+  margin-bottom:5px;
+}
+
+input,textarea{
+  padding:12px 15px;
+  border-radius:12px;
+  border:1px solid #cbd5e1;
+  outline:none;
+}
+
+input:focus,textarea:focus{
+  border-color:#2563eb;
+}
+
+textarea{resize:none;height:120px}
+
+.error{
+  color:red;
+  font-size:13px;
+}
+
+button{
+  grid-column:1/-1;
+  padding:14px;
+  border:none;
+  border-radius:15px;
+  background:#2563eb;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:#1e40af;
+  transform:scale(1.03);
+}
+
+.success{
+  grid-column:1/-1;
+  text-align:center;
+  color:green;
+  font-weight:bold;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+
+@media(max-width:768px){
+  .form-box{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Diiwaan-Gelinta Ardayda</h2>
+  <ul>
+    <li><a href="#">Bogga Hore</a></li>
+    <li><a href="#">Is-Diiwaan-gelin</a></li>
+    <li><a href="#">Nala Soo Xiriir</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <span class="badge">💬 Nala Soo Xiriir</span>
+  <h1>Waan Ku Dhageysaneynaa</h1>
+  <p>Nala wadaag su’aalahaaga, talooyinkaaga ama cabashooyinkaaga.</p>
+</section>
+
+<section class="contact-grid">
+  <div class="contact-card">
+    <div class="icon">✉️</div>
+    <h3>Email</h3>
+    <p>support@studentreg.edu</p>
+  </div>
+  <div class="contact-card">
+    <div class="icon">📞</div>
+    <h3>Telefoon</h3>
+    <p>+1 555 123 4567</p>
+  </div>
+  <div class="contact-card">
+    <div class="icon">📍</div>
+    <h3>Xafiis</h3>
+    <p>Education City</p>
+  </div>
+</section>
+
+<section class="form-section">
+  <form class="form-box" onsubmit="return validateForm()">
+    <h2>📩 Fariin Noo Soo Dir</h2>
+
+    <div class="input-group">
+      <label>Magacaaga</label>
+      <input id="name">
+      <span class="error" id="nameError"></span>
+    </div>
+
+    <div class="input-group">
+      <label>Email</label>
+      <input id="email">
+      <span class="error" id="emailError"></span>
+    </div>
+
+    <div class="input-group" style="grid-column:1/-1">
+      <label>Fariintaada</label>
+      <textarea id="message"></textarea>
+      <span class="error" id="msgError"></span>
+    </div>
+
+    <button type="submit">Dir Fariinta</button>
+    <div class="success" id="successMsg"></div>
+  </form>
+</section>
+
+<script>
+function validateForm(){
+  let ok=true;
+  nameError.textContent="";
+  emailError.textContent="";
+  msgError.textContent="";
+  successMsg.textContent="";
+
+  if(name.value.trim()===""){
+    nameError.textContent="Magac waa waajib";
+    ok=false;
+  }
+  if(!email.value.includes("@")){
+    emailError.textContent="Email sax ah geli";
+    ok=false;
+  }
+  if(message.value.trim().length<5){
+    msgError.textContent="Fariinta waa gaaban tahay";
+    ok=false;
+  }
+
+  if(ok){
+    successMsg.textContent="✅ Fariinta waa la diray, mahadsanid!";
+    name.value=email.value=message.value="";
+  }
+  return false;
+}
+</script>
+
+</body>
+</html>

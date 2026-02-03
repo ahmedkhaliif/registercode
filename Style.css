@@ -1,0 +1,81 @@
+
+body{
+  margin:0;
+  font-family: Arial;
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+}
+
+/* ===== MENU ===== */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:white;
+}
+
+.navbar a{
+  text-decoration:none;
+  margin-left:15px;
+  color:#1e3c72;
+  font-weight:bold;
+}
+
+/* ===== MAIN CARD ===== */
+.card{
+  width:380px;
+  margin:25px auto;
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 0 10px #d1d9ff;
+}
+
+/* ===== FORM INPUTS ===== */
+input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+/* ===== BUTTONS ===== */
+.btn-submit{
+  width:100%;
+  padding:10px;
+  background:#2196f3;
+  color:white;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+.btn-clear, .btn-again{
+  width:100%;
+  padding:10px;
+  background:white;
+  color:#2196f3;
+  border:1px solid #2196f3;
+  border-radius:25px;
+  cursor:pointer;
+  margin-top:8px;
+}
+
+#error{
+  color:red;
+  text-align:center;
+}
+
+.hidden{
+  display:none;
+}
+
+.footer{
+  text-align:center;
+  color:white;
+  margin-top:20px;
+}
+
+
+
+

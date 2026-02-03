@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <title>Nagu Saabsan | Diiwaan-gelinta Ardayda</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #2563eb;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #fbbf24;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(120deg, #6366f1, #818cf8),
+                  url('https://images.unsplash.com/photo-1581090700227-5b9efed3f64a?auto=format&fit=crop&w=1470&q=80');
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      color: white;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 8px 22px;
+      border-radius: 25px;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 25px;
+      font-weight: bold;
+      backdrop-filter: blur(5px);
+    }
+
+    .hero-title {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, #fbbf24, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: rgba(255,255,255,0.9);
+      font-size: 20px;
+    }
+
+    /* ABOUT CONTENT */
+    .about {
+      padding: 80px 20px;
+      background: #fff;
+    }
+
+    .about-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .about p {
+      margin-bottom: 12px;
+      color: #555;
+    }
+
+    .about-card {
+      background: #2563eb;
+      color: #fff;
+      padding: 40px;
+      border-radius: 25px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: default;
+    }
+
+    .about-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .about-card .icon {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* VALUES */
+    .values {
+      background: #f3f4f6;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .values-grid {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .value-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .value-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .value-icon {
+      background: #2563eb;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    /* HELP */
+    .help {
+      padding: 80px 20px;
+      background: #fff;
+    }
+
+    .help-box {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .help-item {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      display: flex;
+      gap: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .help-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .number {
+      background: #2563eb;
+      color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <h2>Diiwaan-Gelinta Ardayda</h2>
+  <ul>
+    <li><a href="#">Bogga Hore</a></li>
+    <li><a href="#">Is-Diiwaan-gelin</a></li>
+    <li><a href="#">Nala Soo Xiriir</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="badge">Nagu Saabsan</span>
+  <h1 class="hero-title">
+    Kor u Qaadista Ardayda Iyadoo La Adeegsanayo Teknoolojiyad
+  </h1>
+  <p>
+    Baro nidaamka casriga ah ee diiwaan-gelinta ardayda
+    iyo sida aan uga dhignay mid fudud oo hufan.
+  </p>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="about">
+  <div class="about-grid">
+    <div>
+      <h2>Waa maxay Nidaamka Diiwaan-gelinta Ardayda?</h2>
+      <p>
+        Nidaamkan waa web-based application loogu talagalay
+        in uu fududeeyo diiwaan-gelinta ardayda.
+      </p>
+      <p>
+        Waxa uu tusaale u yahay isticmaalka HTML, CSS iyo JavaScript
+        iyadoo la adeegsanayo naqshad nadiif ah.
+      </p>
+      <p>
+        Ujeeddadeennu waa diiwaan-gelin degdeg ah, sax ah
+        oo arday walba u sahlan.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <div class="icon">📘</div>
+      <h3>Waxbarasho u Dhisan</h3>
+      <p>Fudud • Qurux Badan • Wax Ku Ool ah</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <h2>Qiyamka Aasaasiga ah</h2>
+
+  <div class="values-grid">
+    <div class="value-box">
+      <div class="value-icon">👥</div>
+      <h3>Arday u Janjeera</h3>
+      <p>Wax walba ardayga ayaa la eegaa</p>
+    </div>
+
+    <div class="value-box">
+      <div class="value-icon">🎯</div>
+      <h3>Fudeyd</h3>
+      <p>Diiwaan-gelin sahlan</p>
+    </div>
+
+    <div class="value-box">
+      <div class="value-icon">🏆</div>
+      <h3>Kalsooni</h3>
+      <p>Nidaam lagu kalsoonaan karo</p>
+    </div>
+
+    <div class="value-box">
+      <div class="value-icon">📚</div>
+      <h3>Waxbarasho Mudnaan Leh</h3>
+      <p>Taageeridda yoolalka waxbarasho</p>
+    </div>
+  </div>
+</section>
+
+<!-- HELP -->
+<section class="help">
+  <div class="help-box">
+    <h2 style="text-align:center;margin-bottom:30px;">Sidee Ayuu Ardayda U Caawiyaa?</h2>
+
+    <div class="help-item">
+      <div class="number">1</div>
+      <p>Diiwaan-gelin degdeg ah oo waqti badbaadinaysa</p>
+    </div>
+
+    <div class="help-item">
+      <div class="number">2</div>
+      <p>Khaladaadka xogta ayaa la yareeyaa</p>
+    </div>
+
+    <div class="help-item">
+      <div class="number">3</div>
+      <p>Waxa uu ka shaqeeyaa dhammaan qalabka</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Nidaamka Diiwaan-gelinta Ardayda</p>
+</footer>
+
+</body>
+</html>
